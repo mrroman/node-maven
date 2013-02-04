@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var http = require('http'),
+    auth = require('../lib/auth.js'),
+    routes = require('../lib/routes.js'),
+    config = require('../lib/config.js');
+
+config.load(function(options) {
+    var authHandler = auth.authHandler(routes.requestHandler, options);
+
+    http.createServer(authHandler).listen(options.server.port, options.server.host);
+    console.log('Server running at http://' + options.server.host + ':' + options.server.port +'/');
+});

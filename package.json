@@ -4,15 +4,21 @@
     "description": "Maven repository server",
     "main": "main.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "nodeunit test/"
     },
     "dependencies": {
-        "mkdirp": "0.3.4"
+        "mkdirp": "0.3.4",
+        "http-auth": "1.2.7"
+    },
+    "devDependencies": {
+        "nodeunit": "0.7.4"
     },
     "repository": {
         "type": "git",
         "url": "http://github.com/mrroman/node-maven.git"
     },
+    "directories": { "lib": "./lib" },
+    "bin": { "nodemaven": "./bin/nodemaven" },
     "author": "Konrad Mrożek <konrad.mrozek@gmail.com>",
     "license": "BSD"
 }

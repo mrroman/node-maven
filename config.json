@@ -1,0 +1,20 @@
+{
+    "server": {
+        "host": "localhost",
+        "port": 1337
+    },
+
+    "security": {
+        "authRealm": "node-maven",
+        "authFile": "users.htpasswd"
+    },
+    
+    "repositories": {
+        "internal": {
+            "path": "repositories/internal"
+        },
+        "snapshots": {
+            "path": "repositories/snapshots"
+        }
+    }
+}

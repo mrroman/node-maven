@@ -14,15 +14,15 @@ How to set up?
 1. Install node.js.
 2. Clone this repository.
 3. Execute `npm install`.
-4. Edit config.js file.
-5. Start server with ``node main.js``.
+4. Edit config.json file.
+5. Execute `npm link`.
+6. Start server with ``nodemaven``.
 
 To do
 -----
 
-1. Authentication/authorization.
-2. Forwarding calls to other servers.
-3. ...
+1. Forwarding calls to other servers.
+2. ...
 
 
 
