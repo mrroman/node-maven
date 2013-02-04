@@ -12,8 +12,10 @@ How to set up?
 --------------
 
 1. Install node.js.
-2. Edit config.js file.
-3. Start server with ``node main.js``
+2. Clone this repository.
+3. Execute `npm install`.
+4. Edit config.js file.
+5. Start server with ``node main.js``.
 
 To do
 -----
