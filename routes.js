@@ -17,9 +17,11 @@ function handleDownload(repository, repoRequest, req, res) {
     
     fs.stat(fullPath, function(err, st) {
         if (err) {
+            console.log('Not found ' + fullPath);
             res.writeHead(404, 'Not found');
             res.end(repoRequest.artifactPath + ' not found');
         } else {
+            console.log('Serving ' + fullPath);
             var stream = fs.createReadStream(fullPath);
             res.writeHead(200);
             stream.pipe(res);
@@ -28,6 +30,7 @@ function handleDownload(repository, repoRequest, req, res) {
 }
 
 function writeUpload(req, path, res) {
+    console.log('Uploading ' + path);
     var stream = fs.createWriteStream(path);
 
     req.on('end', function() {
@@ -79,6 +82,7 @@ exports.requestHandler = function(req, res) {
     if (repository) {
         handleRepository(repository, repoRequest, req, res);
     } else {
+        console.log('Repository URL not found ' + req.url);
         res.writeHead(404, 'Repository not found');
         res.end('Repository ' + repoRequest.repositoryId + ' not found');
     }
