@@ -1,15 +1,18 @@
 {
-  "name": "node-maven",
-  "version": "0.0.1",
-  "description": "Maven repository server",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "mkdirp": "0.3.4"
-  },
-  "repository": "",
-  "author": "",
-  "license": "BSD"
+    "name": "node-maven",
+    "version": "0.0.1",
+    "description": "Maven repository server",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "mkdirp": "0.3.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/mrroman/node-maven.git"
+    },
+    "author": "Konrad Mrożek <konrad.mrozek@gmail.com>",
+    "license": "BSD"
 }
