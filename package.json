@@ -11,7 +11,9 @@
         "http-auth": "1.2.7"
     },
     "devDependencies": {
-        "nodeunit": "0.7.4"
+        "nodeunit": "0.7.4",
+        "nodemock": "0.2.17",
+        "horaa": "0.1.2alpha"
     },
     "repository": {
         "type": "git",
