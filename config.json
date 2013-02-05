@@ -5,8 +5,9 @@
     },
 
     "security": {
-        "authRealm": "node-maven",
-        "authFile": "users.htpasswd"
+        "authType": "digest",
+        "authFile": "users.htpasswd",
+        "authRealm": "node-maven"
     },
     
     "repositories": {

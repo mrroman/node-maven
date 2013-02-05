@@ -6,8 +6,12 @@ var http = require('http'),
     config = require('../lib/config.js');
 
 config.load(function(options) {
-    var authHandler = auth.authHandler(routes.requestHandler, options);
+    var handler = routes.requestHandler;
 
-    http.createServer(authHandler).listen(options.server.port, options.server.host);
+    if (options.security) {
+        handler = auth.authHandler(handler, options);
+    }
+
+    http.createServer(handler).listen(options.server.port, options.server.host);
     console.log('Server running at http://' + options.server.host + ':' + options.server.port +'/');
 });
